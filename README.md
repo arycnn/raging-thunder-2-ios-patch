@@ -4,7 +4,22 @@ Patches the 2010 iOS release of **Raging Thunder 2** (Polarbit) so it launches a
 
 The retail build crashes twice before it ever reaches the menu on current iOS. This patcher fixes both crashes, and can optionally re-enable the developer cheat menu that Polarbit left inside the shipping binary.
 
-**The game is not included here.** This repository contains only the patcher. Supply your own copy of the IPA.
+**The game is not hosted here.** This repository contains only the patcher. See [Getting the game](#getting-the-game) below for where to find the IPA.
+
+## Getting the game
+
+Raging Thunder 2 was pulled from the App Store years ago and Polarbit stopped trading, so there is no way left to buy it. Version 1.0.1 is preserved on the Internet Archive:
+
+**[Download Raging Thunder 2 v1.0.1 (IPA, 15 MB)](https://archive.org/download/R.Thunder_2_1.0.1_ios_2.2/R.Thunder_2_1.0.1_ios_2.2.ipa)**  ([item page](https://archive.org/details/R.Thunder_2_1.0.1_ios_2.2))
+
+That archived copy is already decrypted, which is what makes it patchable. Checksums:
+
+```
+sha256  5e7ce5f0d368481b57f8aee333633c832209f9478bff164790900cf0dd9e2093   R.Thunder_2_1.0.1_ios_2.2.ipa
+sha256  6830fe4ac021d3ad7c1e49da04443ab72ea6a9645a623fda352fc5b5db9204e9   Payload/Raging.app/Raging
+```
+
+The patcher verifies the inner binary itself and refuses to run against anything it does not recognise, so a wrong or corrupted download fails loudly instead of producing a broken build.
 
 ## Requirements
 
@@ -139,6 +154,8 @@ Every patch verifies the bytes it is about to overwrite and aborts if they do no
 
 ## Legal
 
-This repository contains no game code, assets, or binaries. It is a patcher that modifies a copy you already own, in the same spirit as a ROM patch. Raging Thunder 2 is the property of its copyright holders. The game was delisted from the App Store years ago and Polarbit is no longer trading, so there is no way to buy it, but that does not place it in the public domain.
+This repository contains no game code, assets, or binaries. It is a patcher that modifies a copy of the game, in the same spirit as a ROM patch, and it links to a copy preserved by a third party archive.
+
+Raging Thunder 2 remains the property of its copyright holders. Being delisted and unsellable does not place it in the public domain.
 
 The patcher itself is MIT licensed. See [LICENSE](LICENSE).
